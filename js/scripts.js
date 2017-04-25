@@ -7,6 +7,11 @@ var button = document.getElementById('submit');
 
 button.addEventListener("click", weatherAsk)
 
+$('#city').keypress(e => {
+  if (e.key === 'Enter') weatherAsk();
+});
+
+
 function weatherAsk(){
   // var url = api + input.value() + key + unit;
 var city = document.getElementById('city').value;
@@ -63,7 +68,7 @@ function displayOther(description, wind, humidity) {
 function displayCity(cityName) {
 
   var cityContainer = `
-  <h2 class="city">${cityName}</h2>
+  <h4>${cityName}</h4>
 
   `
 

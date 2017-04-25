@@ -19,9 +19,11 @@ h2.weather{
 
 }
 
-h2.city{
+h4{
   font-size: 17vw;
   font-family: 'Abril Fatface', cursive;
+  vertical-align: middle;
+  display: inline-block;
 
 
 
@@ -36,9 +38,8 @@ h3{
   font-family: 'Abril Fatface', cursive;
 }
 
-.city{
-
+.town{
+  vertical-align: middle;
   display: inline-block;
-  vertical-align: bottom;
-  float: none;
+
 }
