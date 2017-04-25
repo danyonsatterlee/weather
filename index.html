@@ -14,6 +14,7 @@
   <!-- Custom CSS-->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans" rel="stylesheet">
   <!-- jQuery HAS TO GO BEFORE JAVA SCRIPT-->
   <script src="lib/jquery.min.js"></script>
   <!-- Bootstrap Java Script-->
@@ -25,28 +26,34 @@
 </head>
 <body>
 
-  <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm"></div>
-          <div class="col-sm text-center">
-            <input id="city" placeholder="City"></input>
-            <button id="submit">Submit</button>
-          </div>
-          <div class="col-sm" ></div>
-        </div>
-      
-      <div class="row">
-        <div class="col-sm" id="temp-container"></div>
-        <div class="col-sm" id="general-container">
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="big">Eye <br>on the<br><h1><h1 class="super-big"> Sky</h1>
+          <h2 class="weather">weather</h2>
+          <input id="city" placeholder="City"></input>
+          <button id="submit">Submit</button>
         </div>
-        <div class="col-sm" id="other-container"></div>
+
+
+
+        <div class="col-md-8 text-center" id="city-container"></div>
+
       </div>
-    </div>
-      <script src="lib/jquery.min.js"></script>
-      <script src="js/scripts.js"></script>
-      <!-- Bootstrap Java Script-->
-      <script src="lib/bootstrap.min.js"></script>
-    </body>
-    </html>
+
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-3 pull-left" id="temp-container"></div>
+
+          <div class="col-md-3 pull-left " id="general-container"></div>
+          <div class="col-md-2 pull-left" id="other-container"></div>
+        </div>
+      </div>
+
+  <script src="lib/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <!-- Bootstrap Java Script-->
+  <script src="lib/bootstrap.min.js"></script>
+</body>
+</html>

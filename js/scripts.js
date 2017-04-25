@@ -20,13 +20,14 @@ var city = document.getElementById('city').value;
     var high = data.main.temp_max;
     var low = data.main.temp_min;
     var cityName = data.name;
-    var description = data.weather.description;
+    var description = data.weather[0].description;
     var wind =  data.wind.speed;
     var humidity = data.main.humidity;
 
     displayTempContainer(mainTemp, high, low);
-    displayGeneralContainer(cityName, description)
-    displayOther(wind, humidity)
+    displayGeneralContainer(description);
+    displayOther(wind, humidity);
+    displayCity(cityName);
  });
 }
 
@@ -42,14 +43,13 @@ function displayTempContainer(mainTemp, high, low) {
 
 }
 
-function displayGeneralContainer(cityName) {
+function displayGeneralContainer(description) {
 
   var generalContainer = `
-  <h3>${cityName}</h3>
+
+  <h3>${description}</h3>
+
   `
-  // <h3>${description}</h3>
-
-
 
   $('#general-container').html(generalContainer)
 
@@ -65,5 +65,16 @@ function displayOther(wind, humidity) {
   `
 
   $('#other-container').html(otherContainer)
+
+}
+
+function displayCity(cityName) {
+
+  var cityContainer = `
+  <h2 class="weather">${cityName}</h2>
+
+  `
+
+  $('#city-container').html(cityContainer)
 
 }
