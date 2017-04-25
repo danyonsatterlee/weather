@@ -25,8 +25,8 @@ var city = document.getElementById('city').value;
     var humidity = data.main.humidity;
 
     displayTempContainer(mainTemp, high, low);
-    displayGeneralContainer(description);
-    displayOther(wind, humidity);
+
+    displayOther(description, wind, humidity);
     displayCity(cityName);
  });
 }
@@ -34,35 +34,27 @@ var city = document.getElementById('city').value;
 function displayTempContainer(mainTemp, high, low) {
 
   var tempContainer = `
-  <h3>Current Temperature: ${mainTemp}</h3>
-  <h3>High Temperature: ${high}</h3>
-  <h3>Low Temperature: ${low}</h3>
+  <h3>Current Temperature: ${mainTemp} °F</h3>
+  <h3>High Temperature: ${high} °F</h3>
+  <h3>Low Temperature: ${low} °F</h3>
   `
 
   $('#temp-container').html(tempContainer)
 
 }
 
-function displayGeneralContainer(description) {
-
-  var generalContainer = `
-
-  <h3>${description}</h3>
-
-  `
-
-  $('#general-container').html(generalContainer)
-
-}
 
 
-function displayOther(wind, humidity) {
+
+function displayOther(description, wind, humidity) {
 
   var otherContainer = `
-  <h3>Wind: ${wind}</h3>
-  <h3>Humidity: ${humidity}</h3>
+  <h3>${description}</h3>
+  <h3>Wind: ${wind} mph</h3>
+  <h3>Humidity: ${humidity} %</h3>
 
   `
+
 
   $('#other-container').html(otherContainer)
 
@@ -71,7 +63,7 @@ function displayOther(wind, humidity) {
 function displayCity(cityName) {
 
   var cityContainer = `
-  <h2 class="weather">${cityName}</h2>
+  <h2 class="city">${cityName}</h2>
 
   `
 
